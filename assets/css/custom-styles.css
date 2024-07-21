@@ -1,0 +1,85 @@
+/* custom-styles.css */
+.search-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.search-form-container input[type="text"] {
+    flex: 1;
+}
+
+.search-form-container input,
+.search-form-container button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.search-form-container input[type="range"] {
+    width: 100%;
+}
+
+.search-form-container .range-value {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.search-form-container .geolocate-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-form-container button {
+    cursor: pointer;
+}
+
+.search-results {
+    margin-top: 2rem;
+}
+
+.search-result-item {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .search-form-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .search-results {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .search-result-item {
+        flex: 1 1 calc(33.333% - 1rem);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+}
